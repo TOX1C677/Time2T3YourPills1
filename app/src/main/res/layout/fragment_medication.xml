@@ -26,6 +26,13 @@
         android:hint="Timer (in minutes)"
         android:inputType="number"
         android:layout_marginTop="10dp" />
+    <EditText
+        android:id="@+id/repeat_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Loop counter"
+        android:inputType="number"/>
+
 
     <Button
         android:id="@+id/add_button"
@@ -34,7 +41,8 @@
         android:text="Add Medication"
         android:layout_marginTop="10dp" />
 
-    <ListView
+    <!-- Замените ListView на RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/medications_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"

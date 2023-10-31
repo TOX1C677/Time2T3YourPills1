@@ -15,6 +15,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/bottom_nav_menu" />
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled" /> <!-- Этот атрибут заставляет отображать метки на всех вкладках -->
+
+
 
 </RelativeLayout>

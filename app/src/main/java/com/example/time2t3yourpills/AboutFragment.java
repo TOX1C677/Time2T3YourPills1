@@ -8,13 +8,19 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 public class AboutFragment extends Fragment {
+
+    private SharedViewModel sharedViewModel;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_about, container, false);
+
+        // Get the SharedViewModel instance
+        sharedViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
 
         TextView appNameTextView = view.findViewById(R.id.app_name_text_view);
         TextView appVersionTextView = view.findViewById(R.id.app_version_text_view);
